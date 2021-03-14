@@ -1,3 +1,3 @@
 # Python MySql Operation
-* Basic Curd Operation
-* Advance Curd Operation
+* Basic CRUD Operation
+* Advance CRUD Operation
