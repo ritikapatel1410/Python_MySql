@@ -6,3 +6,5 @@
 *__init__.py
 #ignore .env file
 *.env
+# ignore .csv# file
+*.csv#
