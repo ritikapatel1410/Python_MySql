@@ -11,6 +11,7 @@ import sys
 sys.path.insert(0,os.path.realpath("LogFile"))
 import loggerfile
 from decouple import config
+
 class Basic_CRUD_DB:
     def __init__(self):
         self.mydb=mysql.connect(host=config('DB_HOST'),user=config('DB_USERNAME'),password=config('DB_PASSWORD'))
@@ -21,13 +22,11 @@ class Basic_CRUD_DB:
             loggerfile.Logger("info","created database {0} successfully".format(database_name))
             return "created database {0} successfully".format(database_name)
         except NameError as error:
-            print(error)
-            loggerfile.Logger("error","{0} database already exist".format(database_name))
+            loggerfile.Logger("error","{0} error occured".format(error))
             return "{0} database already exist".format(database_name)
         except Exception as error:
-            print(error)
-            loggerfile.Logger("error","{0} database already exist".format(database_name))
-            return "{0} database already exist".format(database_name)
+            loggerfile.Logger("error","{0} error occured".format(error))
+            return "{0} database already exist".format(database)
 
     def show_list_of_db(self):
         try:
@@ -46,10 +45,10 @@ class Basic_CRUD_DB:
             loggerfile.Logger("info","{0} successfully deleted database".format(database_name))
             return "{0} successfully deleted database".format(database_name)
         except NameError as error:
-            loggerfile.Logger("error","{0} database doesn't exist".format(database_name))
+            loggerfile.Logger("error","{0} error occured".format(error))
             return "{0} database doesn't exist".format(database_name)
         except Exception as error:
-            loggerfile.Logger("error","{0} database doesn't exist".format(database_name))
+            loggerfile.Logger("error","{0} error occured".format(error))
             return "{0} database doesn't exist".format(database_name)
     
         
