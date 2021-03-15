@@ -25,10 +25,10 @@ class Basic_CRUD:
             loggerfile.Logger("info","{0} successfully created table into database".format(mydb.database))
         except NameError as error:
             Flag=0
-            loggerfile.Logger("error","{0} already exist into database".format(mydb.database))
+            loggerfile.Logger("error","{0} error occured".format(error))
         except Exception as error:
             Flag=0
-            loggerfile.Logger("error","{0} already exist into database".format(mydb.database))
+            loggerfile.Logger("error","{0} already exist into database".format(error))
         if Flag==1:
             return "table successfully created into {0} database".format(mydb.database)
         else:
