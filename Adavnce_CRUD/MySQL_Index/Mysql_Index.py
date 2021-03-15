@@ -88,7 +88,7 @@ class Index_Operation:
                 index deleted successfully
         """
         try:
-            print("================================ Drop View ===================================")
+            print("================================ Drop View ===============MySQL_Index/====================")
             self.mycursor.execute("DROP INDEX index_CUSTOMERS ON CUSTOMER_DATA")
             loggerfile.Logger("info","drop index successfully")
             return "index deleted successfully"
