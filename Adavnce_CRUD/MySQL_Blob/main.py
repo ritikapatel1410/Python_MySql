@@ -49,6 +49,6 @@ def insertBLOB(name, photo):
     except Exception as error:
         loggerfile.Logger("error","{0} error occured".format(error))
 
-insertBLOB("Vijay", "Image/student1.png")
+insertBLOB("Vansh", "Image/student1.png")
 
     
