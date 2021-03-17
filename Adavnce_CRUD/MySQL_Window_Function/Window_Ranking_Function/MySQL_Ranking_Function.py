@@ -35,7 +35,7 @@ class Ranking_Function:
             rank = self.mycursor.fetchall()
             for records in rank:
                 print(records)
-            loggerfile.Logger("info","RANK {0} successfully".format( count))
+            loggerfile.Logger("info","RANK Function successfully")
         except Exception as error:
             loggerfile.Logger("error","{0} occured".format(error))
 
@@ -54,7 +54,7 @@ class Ranking_Function:
             dense_rank = self.mycursor.fetchall()
             for records in dense_rank:
                 print(records)
-            loggerfile.Logger("info","DENSE_RANK {0} get successfully".format(Sum))
+            loggerfile.Logger("info","DENSE_RANK function performed successfully uccessfully")
         except Exception as error:
             loggerfile.Logger("error","{0} occured".format(error))
 
@@ -74,7 +74,7 @@ class Ranking_Function:
             percentage_rank=self.mycursor.fetchall()
             for records in percentage_rank:
                 print(records)
-            loggerfile.Logger("info","PERCENT_RANK  {0} get successfully".format(AVG))
+            loggerfile.Logger("info","PERCENT_RANK function performed successfully")
         except Exception as error:
             loggerfile.Logger("error","{0} occured".format(error))
 
@@ -93,7 +93,7 @@ class Ranking_Function:
             row_number=self.mycursor.fetchall()
             for records in row_number:
                 print(records)
-            loggerfile.Logger("info","ROW_NUMBER {0} get successfully".format(Min))
+            loggerfile.Logger("info","ROW_NUMBER fuction performed get successfully")
         except Exception as error:
             loggerfile.Logger("error","{0} occured".format(error))
 
